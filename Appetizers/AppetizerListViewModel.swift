@@ -10,6 +10,7 @@ import SwiftUI
 final class AppetizerListViewModel: ObservableObject{
     
     @Published var appetizers: [Appetizer] = []
+    @Published var alertItem: AlertItem?
     
     init(){
         getAppetizers()
@@ -19,10 +20,21 @@ final class AppetizerListViewModel: ObservableObject{
         NetworkManager.shared.getAppetizers { result in
             DispatchQueue.main.async {
                 switch result{
+                
                 case .success(let appetizers):
                     self.appetizers = appetizers
+                    
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    switch error{
+                    case .invalidData:
+                        self.alertItem = AlertContext.invalidData
+                    case .invalidResponse:
+                        self.alertItem = AlertContext.invalidResponse
+                    case .invalidURL:
+                        self.alertItem = AlertContext.invalidURL
+                    case .unableToComplete:
+                        self.alertItem = AlertContext.unableToComplete
+                    }
                 }
             }
         }

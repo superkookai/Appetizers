@@ -19,16 +19,15 @@ struct AppetizerListRow: View {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: 120, height: 90)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                
                 } else if phase.error != nil {
-                    Text("There was an error loading the image.")
+                    Color.red
                 } else {
                     ProgressView()
                 }
             }
+            .scaledToFit()
+            .frame(width: 120, height: 90)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
             
 //           Image("asian-flank-steak")
 //               .resizable()
