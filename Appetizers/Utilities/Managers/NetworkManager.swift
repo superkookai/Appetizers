@@ -5,7 +5,7 @@
 //  Created by Weerawut Chaiyasomboon on 24/9/2566 BE.
 //
 
-import Foundation
+import UIKit
 
 final class NetworkManager{
     
@@ -15,6 +15,8 @@ final class NetworkManager{
     private let appetizerURL = baseURL + "appetizers"
     
     private init(){ }
+    
+    private let cache = NSCache<NSString, UIImage>()
     
     func getAppetizers(completed: @escaping (Result<[Appetizer], APError>) -> Void) {
         
@@ -50,5 +52,35 @@ final class NetworkManager{
         
         task.resume()
     }
+    
+    func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void ) {
+            
+            //Found in cache, then return image
+            let cacheKey = NSString(string: urlString)
+            if let image = cache.object(forKey: cacheKey) {
+                completed(image)
+                return
+            }
+            
+            //No in cache, download the image
+            guard let url = URL(string: urlString) else {
+                completed(nil)
+                return
+            }
+            
+            let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+                
+                guard let data, let image = UIImage(data: data) else {
+                    completed(nil)
+                    return
+                }
+                
+                //set image in cache
+                self.cache.setObject(image, forKey: cacheKey)
+                completed(image)
+            }
+            
+            task.resume()
+        }
     
 }
