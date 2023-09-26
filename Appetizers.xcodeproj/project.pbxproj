@@ -14,6 +14,8 @@
 		BFB2FC862AC274A3003A4701 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB2FC852AC274A3003A4701 /* AppetizerDetailView.swift */; };
 		BFB2FC892AC283CF003A4701 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB2FC882AC283CF003A4701 /* APButton.swift */; };
 		BFB2FC8B2AC285CA003A4701 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB2FC8A2AC285CA003A4701 /* XDismissButton.swift */; };
+		BFB2FC8D2AC2A64B003A4701 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB2FC8C2AC2A64B003A4701 /* AccountViewModel.swift */; };
+		BFB2FC8F2AC2A891003A4701 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB2FC8E2AC2A891003A4701 /* String+Ext.swift */; };
 		BFB77BB22AC12EE500BA76D5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB77BB12AC12EE500BA76D5 /* Alert.swift */; };
 		BFB77BB42AC136D200BA76D5 /* LodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB77BB32AC136D200BA76D5 /* LodingView.swift */; };
 		BFB77BB62AC1372600BA76D5 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB77BB52AC1372600BA76D5 /* Color+Ext.swift */; };
@@ -36,6 +38,8 @@
 		BFB2FC852AC274A3003A4701 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
 		BFB2FC882AC283CF003A4701 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		BFB2FC8A2AC285CA003A4701 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		BFB2FC8C2AC2A64B003A4701 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		BFB2FC8E2AC2A891003A4701 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		BFB77BB12AC12EE500BA76D5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		BFB77BB32AC136D200BA76D5 /* LodingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingView.swift; sourceTree = "<group>"; };
 		BFB77BB52AC1372600BA76D5 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC363EF2ABECF6A00A1A2A3 /* AccountView.swift */,
+				BFB2FC8C2AC2A64B003A4701 /* AccountViewModel.swift */,
 			);
 			path = AccountView;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BFB77BB52AC1372600BA76D5 /* Color+Ext.swift */,
+				BFB2FC8E2AC2A891003A4701 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				BF306DD62ABFE7C900075F8F /* APError.swift in Sources */,
 				BFB2FC8B2AC285CA003A4701 /* XDismissButton.swift in Sources */,
 				BFC363F42ABEDA5200A1A2A3 /* Appetizer.swift in Sources */,
+				BFB2FC8D2AC2A64B003A4701 /* AccountViewModel.swift in Sources */,
 				BF306DD82ABFF17F00075F8F /* AppetizerListViewModel.swift in Sources */,
 				BFB77BB62AC1372600BA76D5 /* Color+Ext.swift in Sources */,
 				BFC363F02ABECF6A00A1A2A3 /* AccountView.swift in Sources */,
@@ -306,6 +313,7 @@
 				BF306DD42ABFE56300075F8F /* NetworkManager.swift in Sources */,
 				BFB77BB42AC136D200BA76D5 /* LodingView.swift in Sources */,
 				BFB77BB82AC143FE00BA76D5 /* RemoteImage.swift in Sources */,
+				BFB2FC8F2AC2A891003A4701 /* String+Ext.swift in Sources */,
 				BFB2FC862AC274A3003A4701 /* AppetizerDetailView.swift in Sources */,
 				BFC363E02ABECD5A00A1A2A3 /* AppetizersApp.swift in Sources */,
 				BFB77BB22AC12EE500BA76D5 /* Alert.swift in Sources */,

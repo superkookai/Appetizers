@@ -15,4 +15,4 @@
 //    static let brandPrimary = UIColor(named: "brandPrimary")
 //}
 
-//There are Error invalid redeclation, Why?
+//There are Error invalid redeclation, Why? >> Answer: Xcode 15 automatically set Color name to be variable name of Color type
