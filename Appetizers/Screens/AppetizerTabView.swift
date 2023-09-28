@@ -9,11 +9,12 @@ import SwiftUI
 
 struct AppetizerTabView: View {
     
-    @State private var selectedTab = 0
+//    @State private var selectedTab = 0
+    @EnvironmentObject var order: Order
     
     var body: some View {
         
-        TabView(selection: $selectedTab) {
+        TabView(selection: $order.selectedTab) {
             AppetizerListView()
                 .tabItem {
                     Image(systemName: "house")

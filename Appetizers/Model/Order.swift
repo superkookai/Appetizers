@@ -10,6 +10,7 @@ import SwiftUI
 final class Order: ObservableObject{
     
     @Published var items: [Appetizer] = []
+    @Published var selectedTab = 0
     
     var totalPrice: Double{
         items.reduce(0){ $0 + $1.price}
