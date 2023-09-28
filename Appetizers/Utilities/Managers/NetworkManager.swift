@@ -53,6 +53,21 @@ final class NetworkManager{
         task.resume()
     }
     
+    func getAppetizers() async throws -> [Appetizer] {
+            guard let url = URL(string: appetizerURL) else {
+                throw APError.invalidURL
+            }
+            
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
+            do {
+                let decoder = JSONDecoder()
+                return try decoder.decode(AppetizerResponse.self, from: data).request
+            } catch {
+                throw APError.invalidData
+            }
+        }
+    
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void ) {
             
             //Found in cache, then return image
