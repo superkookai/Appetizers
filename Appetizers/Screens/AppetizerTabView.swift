@@ -35,6 +35,7 @@ struct AppetizerTabView: View {
                     Text("Order")
                 }
                 .tag(2)
+                .badge(order.items.count)
         }
         .accentColor(Color("brandPrimary"))
     }
