@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AppetizerDetailView: View {
+    
+    @EnvironmentObject var order: Order
+    
     let appetizer: Appetizer
     @Binding var isShowingDetail: Bool
     
@@ -42,7 +45,8 @@ struct AppetizerDetailView: View {
             Spacer()
             
             Button(action: {
-                
+                order.add(appetizer)
+                isShowingDetail = false
             }, label: {
                 APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add to Order")
             })
@@ -64,6 +68,7 @@ struct AppetizerDetailView: View {
 
 #Preview {
     AppetizerDetailView(appetizer: MockData.sampleAppetizer, isShowingDetail: .constant(false))
+        .environmentObject(Order())
 }
 
 struct NutritionInfoView: View{
